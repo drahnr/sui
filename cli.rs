@@ -29,9 +29,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         eprintln!("{}", HELP);
         std::process::exit(1);
     }
-	let exe = &args[2];
-	let data_file = &args[3];
-	let output = &args[4];
+    let exe = &args[2];
+    let data_file = &args[3];
+    let output = &args[4];
     let exe = std::fs::read(exe)?;
     let data = std::fs::read(data)?;
 
