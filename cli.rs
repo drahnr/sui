@@ -16,9 +16,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let sectionname = if args.len() < 1 {
         eprintln!("{}", HELP);
         std::process::exit(1);
-	} else {
-		&args[1]
-	};
+    } else {
+        &args[1]
+    };
     if let Some(section) = find_section(sectionname) {
         println!("Found section");
         println!("{}", std::str::from_utf8(section)?);
