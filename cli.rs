@@ -6,7 +6,10 @@ use libsui::PortableExecutable;
 use libsui::utils;
 
 static TEST_ICO: &[u8] = include_bytes!("./tests/test.ico");
-const HELP: &str = r#"Usage: sui <sectionname> <exe> <data_file> <output>"#;
+const HELP: &str = r#" Usage:
+insert new section: sui <sectionname> <exe> <data_file> <output>
+extract existing section: sui <sectionname>
+"#;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let args: Vec<String> = std::env::args().collect();
